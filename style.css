@@ -1,0 +1,191 @@
+:root {
+  --primary-color: #1d4ed8;
+  --secondary-color: #dbeafe;
+  --header-bg: #0f172a;
+  --table-header: #2563eb;
+  --table-hover: #e0f2fe;
+  --text-color: #1f2937;
+  --border-color: #cbd5e1;
+  --panel-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+  color: var(--text-color);
+}
+
+.page-header {
+  background: var(--header-bg);
+  color: #fff;
+  padding: 1.5rem 0;
+}
+
+.title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.title-wrap img {
+  border-radius: 12px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.add-expense-section,
+.expenses-section,
+.products-section,
+.tips-section,
+.video-section {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.product-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0.4rem 0;
+}
+
+.add-expense-section > form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  align-items: end;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 700;
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
+
+input:not([type="button"]),
+select {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: #fff;
+}
+
+input:focus,
+select:focus {
+  outline: 3px solid rgba(37, 99, 235, 0.2);
+  border-color: var(--primary-color);
+}
+
+button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #1e40af;
+}
+
+.expenses-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.expenses-section th,
+.expenses-section td {
+  border: 1px solid var(--border-color);
+  padding: 0.85rem;
+  text-align: left;
+}
+
+.expenses-section thead th {
+  background: var(--table-header);
+  color: #fff;
+}
+
+.expenses-section tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.expenses-section tbody tr:hover {
+  background: var(--table-hover);
+}
+
+.expenses-section td {
+  color: var(--text-color);
+}
+
+.tips-section summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.video-section iframe {
+  width: 100%;
+  max-width: 720px;
+  height: 360px;
+  border: none;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .add-expense-section,
+  .expenses-section,
+  .products-section,
+  .tips-section,
+  .video-section {
+    padding: 1rem;
+  }
+}

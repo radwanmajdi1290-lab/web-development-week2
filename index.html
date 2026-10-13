@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="title-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=80&q=80"
+          alt="Budget tracker icon"
+          width="52"
+        />
+        <h1>Budget Tracker</h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="add-expense-section">
+        <h2>Add Expense</h2>
+        <form aria-label="Add expense form">
+          <div class="form-row">
+            <label for="expense-name">Expense Name</label>
+            <input id="expense-name" type="text" name="expense-name" placeholder="Groceries" />
+          </div>
+
+          <div class="form-row">
+            <label for="expense-amount">Amount</label>
+            <input id="expense-amount" type="number" name="expense-amount" min="0" step="0.01" placeholder="0.00" />
+          </div>
+
+          <div class="form-row">
+            <label for="expense-category">Category</label>
+            <select id="expense-category" name="expense-category">
+              <option value="">Select a category</option>
+              <option value="Food">Food</option>
+              <option value="Transport">Transport</option>
+              <option value="Rent">Rent</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="expense-date">Date</label>
+            <input id="expense-date" type="date" name="expense-date" />
+          </div>
+
+          <button type="button">Add Expense</button>
+        </form>
+      </section>
+
+      <section class="expenses-section">
+        <h2>Expense History</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Amount</th>
+              <th>Category</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Groceries</td>
+              <td>$78.45</td>
+              <td>Food</td>
+              <td>2026-10-01</td>
+            </tr>
+            <tr>
+              <td>Bus Pass</td>
+              <td>$24.00</td>
+              <td>Transport</td>
+              <td>2026-10-04</td>
+            </tr>
+            <tr>
+              <td>Apartment Rent</td>
+              <td>$950.00</td>
+              <td>Rent</td>
+              <td>2026-10-05</td>
+            </tr>
+            <tr>
+              <td>Movie Night</td>
+              <td>$18.50</td>
+              <td>Entertainment</td>
+              <td>2026-10-07</td>
+            </tr>
+            <tr>
+              <td>Streaming Service</td>
+              <td>$12.99</td>
+              <td>Other</td>
+              <td>2026-10-09</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="products-section">
+        <h2>Example Products</h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <h3>Organic Coffee</h3>
+            <p class="price">$12.50</p>
+            <p>Fresh roasted beans for your daily routine.</p>
+          </article>
+          <article class="product-card">
+            <h3>Reusable Bottle</h3>
+            <p class="price">$18.00</p>
+            <p>Insulated bottle for work, gym, or travel.</p>
+          </article>
+          <article class="product-card">
+            <h3>Notebook Set</h3>
+            <p class="price">$9.99</p>
+            <p>Minimal design notebooks for planning and notes.</p>
+          </article>
+          <article class="product-card">
+            <h3>Desk Lamp</h3>
+            <p class="price">$27.75</p>
+            <p>Energy-efficient lighting for a productive workspace.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="tips-section">
+        <details>
+          <summary>How to use this tracker</summary>
+          <p>
+            Enter a new expense, choose the correct category, and keep track of spending
+            so your monthly budget stays balanced.
+          </p>
+        </details>
+      </section>
+
+      <section class="video-section">
+        <h2>Smart Budgeting Tips</h2>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/6Q4r3s4LxT4?si=6xTuH0whoJDU1B8D"
+          title="Budgeting tips video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </section>
+    </main>
+  </body>
+</html>
